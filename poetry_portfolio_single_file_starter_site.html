@@ -72,9 +72,9 @@
 
   <script>
     const POEMS=[
-      {title:"Harbor, night",date:"2025-08-14",tags:["sea","night"],text:`The ropes remember what the hands forget.\nWater keeps the rest.\n\nFarther out, a buoy winks like a tired god,\nand each wave repeats its single argument.`},
-      {title:"After rain",date:"2025-07-03",tags:["city","love"],text:`Neon in puddles — we step around our names\nlike crimes we didn't commit.\nThe bus windows hold us twice, once for each regret.\nA dog shakes itself clean and the street applauds.`},
-      {title:"Half orange",date:"2025-05-22",tags:["memory"],text:`The kitchen light makes a cathedral of the sink.\nWe pray with citrus.\n\nOutside, rain rehearses its unending speech\nagainst the glass we haven't cleaned.`}
+      {title:"Example1",text:`test`},
+      {title:"Example1",text:`test`},
+      {title:"Example1",text:`test`},
     ];
     const grid=document.getElementById('poemGrid');
     function render(){grid.innerHTML=POEMS.map(p=>`<article class='poem'><h3>${p.title}</h3><p>${p.text}</p><div class='meta'>${p.date} · ${p.tags.map(t=>`<span class='tag'>#${t}</span>`).join(' ')}</div></article>`).join('');}
