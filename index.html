@@ -70,20 +70,39 @@
     </footer>
   </div>
 
-  <script>
-    const POEMS=[
-      {title:"Example1",text:`Esto es una prueba
-      para ver
+ <script>
+  const POEMS = [
+    {
+      title: "Test1",
+      text: `Probando como se
       
-      como se escribe
-      en la página`},
-      {title:"Example1",text:`test`},
-      {title:"Example1",text:`test`},
-    ];
-    const grid=document.getElementById('poemGrid');
-    function render(){grid.innerHTML=POEMS.map(p=>`<article class='poem'><h3>${p.title}</h3><p>${p.text}</p><div class='meta'>${p.date} · ${p.tags.map(t=>`<span class='tag'>#${t}</span>`).join(' ')}</div></article>`).join('');}
-    render();
-    document.getElementById('year').textContent=new Date().getFullYear();
-  </script>
+      escribe
+      en html`
+    },
+    {
+      title: "Test2",
+      text: `Nada`
+    },
+    {
+      title: "Test3",
+      text: ``
+    }
+  ];
+
+  const grid = document.getElementById('poemGrid');
+
+  function render() {
+    grid.innerHTML = POEMS.map(p => `
+      <article class="poem">
+        <h3>${p.title}</h3>
+        <p>${p.text}</p>
+      </article>
+    `).join('');
+  }
+
+  render();
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
